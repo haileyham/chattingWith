@@ -10,7 +10,7 @@ const server = http.createServer(app)
 
 const io = new Server(server, {
   cors: {
-    origin: "https://visible-belita-haileyham.koyeb.app/",
+    origin: "https://chatting-with.vercel.app/",
     methods: ["GET", "POST"],
   },
 });
