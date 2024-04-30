@@ -41,6 +41,6 @@ io.on("connection", (socket) => { //connection 이벤트핸들러, client가 ser
   })
 })
 
-server.listen(3001, () => {
+server.listen(8000, () => {
   console.log("SERVER IS RUNNING")
 })
