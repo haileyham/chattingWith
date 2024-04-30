@@ -5,7 +5,7 @@ import { useLocation } from 'react-router-dom';
 import { styled } from 'styled-components';
 
 
-const socket = io.connect("http://localhost:3001") //back에서는 3000으로 front에서는 3001 / io.connect 함수 사용하여 server, socket 연결 / 주의할 점은 server와 client 간의 socket 통신을 위해 동일한 Socket.io 버전 사용해야 함
+const socket = io.connect("https://visible-belita-haileyham.koyeb.app") //back에서는 3000으로 front에서는 3001 / io.connect 함수 사용하여 server, socket 연결 / 주의할 점은 server와 client 간의 socket 통신을 위해 동일한 Socket.io 버전 사용해야 함
 
 export default function ChatRoom(props) {
   const [message, setMessage] = useState(""); //input 입력한 것 message에 담기
