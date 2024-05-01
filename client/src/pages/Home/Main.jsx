@@ -24,7 +24,7 @@ export default function Main() {
           <S.WrapInputBtn>
             <S.RoomNumberInput placeholder='방번호 입력' type="number" onChange={(e) => { setRoom(e.target.value) }}></S.RoomNumberInput>
             <S.UsernameInput placeholder='닉네임 입력' onChange={(e) => { setUsername(e.target.value) }}></S.UsernameInput>
-            <Link to={`/chattingRoom?username=${username}&room=${room}`}>
+            <Link to={`/chattingRoom?username=${username}&room=${room}`} style={{ width: "80%" }}>
               <S.IntoChatRoomBtn>채팅방 입장</S.IntoChatRoomBtn>
             </Link>
           </S.WrapInputBtn>
