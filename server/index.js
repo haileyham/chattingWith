@@ -10,7 +10,7 @@ const server = http.createServer(app)
 
 const io = new Server(server, {
   cors: {
-    origin: "*",
+    origin: process.env.CORS_ORIGIN,
     methods: ["GET", "POST"],
   },
 });
@@ -41,6 +41,10 @@ io.on("connection", (socket) => { //connection 이벤트핸들러, client가 ser
   })
 })
 
-server.listen(8000, () => {
+server.listen(process.env.PORT, () => {
   console.log("SERVER IS RUNNING")
 })
+
+app.get('/', (req, res) => {
+  res.status(200).send('Server is running successfully');
+});
