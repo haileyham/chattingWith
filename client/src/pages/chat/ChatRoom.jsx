@@ -1,28 +1,26 @@
 import React from 'react'
-import io from 'socket.io-client'; //socket.io 라이브러리에서 io함수 import / 서버와 통신
+import io from 'socket.io-client';
 import { useEffect, useState } from 'react';
 import { useLocation } from 'react-router-dom';
 import { styled } from 'styled-components';
 
-
-const socket = io.connect("https://visible-belita-haileyham.koyeb.app") //back에서는 3000으로 front에서는 3001 / io.connect 함수 사용하여 server, socket 연결 / 주의할 점은 server와 client 간의 socket 통신을 위해 동일한 Socket.io 버전 사용해야 함
+const socket = io.connect(process.env.SERVER)
 
 export default function ChatRoom(props) {
-  const [message, setMessage] = useState(""); //input 입력한 것 message에 담기
+  const [message, setMessage] = useState("");
   // const [messageReceived, setMessageReceived] = useState(""); //서버 수신 메시지
-  const [chatMessage, setChatMessage] = useState([]); // 모든 채팅 메시지 저장
+  const [chatMessage, setChatMessage] = useState([]);
 
   const location = useLocation();
   const searchParams = new URLSearchParams(location.search);
   const username = searchParams.get('username');
   const room = searchParams.get('room');
 
-
   // 전체 메시지 전달
   const sendMessage = () => {
-    socket.emit("send_message", { message, user: username }); // socket.io 사용하여 client에서 server로 데이터 전송 / 첫번째 매개변수 이벤트 이름 지정, 두번째 매개변수로 데이터 전달 // input으로 받은 message 서버로 전송
-    setChatMessage([...chatMessage, { message, user: username }]);//모든 채팅 메시지 저장하기 위해서 배열로 저장 / 기존것에 input message 입력한 것과 user 구분
-    setMessage(""); //input 입력하는 메시지 useState는 초기화
+    socket.emit("send_message", { message, user: username });
+    setChatMessage([...chatMessage, { message, user: username }]);
+    setMessage("");
     console.log(chatMessage)
 
   };
@@ -46,19 +44,13 @@ export default function ChatRoom(props) {
       return;
     } else {
       socket.emit("send_message_Room", { message, room, user: username, time: messageWithTime })
-      setChatMessage([...chatMessage, { message, user: username, time: messageWithTime }]);//모든 채팅 메시지 저장하기 위해서 배열로 저장 / 기존것에 input message 입력한 것과 user 구분
-      setMessage(""); //input 입력하는 메시지 useState는 초기화
-      console.log(chatMessage)
+      setChatMessage([...chatMessage, { message, user: username, time: messageWithTime }]);
+      setMessage("");
     }
   }
 
-  // input 창 enter 키 눌러서 Room으로 메시지 전달 (form 태그 안에 button 태그 type="submit" 방전달에만 달았음)
   const handleSubmit = (e) => {
-    e.preventDefault(); // 폼 제출 기본 동작 중단
-    // 폼 제출 시 수행할 로직을 여기에 추가
-    // if (message.trim() === '') {
-    //   alert('안돼앵')
-    // }
+    e.preventDefault();
   }
 
   // 방입장
@@ -72,10 +64,9 @@ export default function ChatRoom(props) {
   }, []);
 
   useEffect(() => {
-    socket.on("receive_message", (data) => { //서버에서 보낸 것 수신
-      setChatMessage([...chatMessage, { message: data.message, user: data.user, time: messageWithTime }]) //서버에서 받은 것 messageReceived에 담기
+    socket.on("receive_message", (data) => {
+      setChatMessage([...chatMessage, { message: data.message, user: data.user, time: messageWithTime }])
     })
-    // console.log(chatMessage)
   }, [socket, chatMessage])
 
   return (
