@@ -74,7 +74,7 @@ export default function ChatRoom(props) {
       <S.ChattingContainer>
         <S.Header>
           <S.Heading>Room : {room}</S.Heading>
-          <p>myname : {username}</p>
+          <p>my name : {username}</p>
         </S.Header>
         <S.MessageList>
           <p style={{ color: "#525252" }}>- <strong>{username}</strong>님 <strong>{room}</strong>번방에 오신 것을 환영합니다. 자유롭게 대화를 나누세요. -</p>
