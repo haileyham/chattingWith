@@ -10,7 +10,7 @@ const server = http.createServer(app)
 
 const io = new Server(server, {
   cors: {
-    origin: [process.env.CORS_ORIGIN, 'http://localhost:3000'],
+    origin: process.env.CORS_ORIGIN,
     methods: ["GET", "POST"],
   },
 });
@@ -36,11 +36,15 @@ io.on("connection", (socket) => {
   // 방입장
   socket.on("user_join", ({ room, user }) => {
     const joinMessage = `${user}님이 채팅방 ${room}에 입장했습니다.`
-    socket.to(room).emit("receive_message", { message: joinMessage, user: "관리자" })
+    socket.to(room).emit("receive_message", { message: joinMessage, admit: "관리자" })
   })
 })
 
 server.listen(process.env.PORT, () => {
   console.log("SERVER IS RUNNING")
 })
+
+app.get('/', (req, res) => {
+  res.status(200).send('Server is running successfully');
+});
 
