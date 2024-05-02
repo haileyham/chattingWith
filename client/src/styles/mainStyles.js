@@ -5,13 +5,15 @@ const imagePath = process.env.PUBLIC_URL + '/172444.webp';
 export const MainContainer = styled.main`
     margin:0;
     box-sizing: border-box;
+    height:100vh;
+    background: #fff;
 `
 
 export const Nav = styled.nav`
     display:flex;
     max-width:1200px;
-    margin:1rem auto;
-    padding:1rem;
+    margin:auto;
+    padding:2rem 1rem 1rem;
     gap:1rem;
     text-align: center;
     align-items: center;
@@ -26,23 +28,24 @@ export const Logo = styled.span`
 `
 
 export const NavA = styled.a`
-    text-decoration: none;
-    flex-grow: 1;
-    cursor: pointer;
     position: relative;
+    flex-grow: 1;
+    color:inherit;
+    text-decoration: none;
+    cursor: pointer;
     &::before {
         content: '';
         position: absolute;
         top:1.7rem;
-        left: 50%; /* 중앙부터 시작 */
+        left: 50%;
         width: 0;
         height: 2px;
-        background: #3f3f3f; /* 라인 색상 설정 */
-        transition: width 0.3s ease; /* 애니메이션 효과 설정 */
-        transform: translateX(-50%); /* 중앙 정렬 */
+        background: #3f3f3f; 
+        transition: width 0.3s ease; 
+        transform: translateX(-50%);
       }
     &:hover::before {
-        width: 70%; /* 호버 시 라인이 중앙부터 퍼지도록 설정 */
+        width: 70%; 
     }
     @media (min-width: 1080px) {
       padding: 2rem;
@@ -62,10 +65,11 @@ export const IntoChatContainer1 = styled.div`
 `
 
 export const IntoChatContainer2 = styled.div`
-    margin:2rem auto 5rem;
+    margin:5rem auto;
     max-width: 1080px;
-    height:20rem;
-    @media (min-width: 1080px) {
+    @media (min-width: 768px) {
+      margin:-2rem auto;
+      height:20rem;
     }
 `
 
@@ -78,34 +82,43 @@ export const WrapInputBtn = styled.div`
     justify-content: center; 
     align-items:center;
     font-size: 1rem;
-    gap:10px;
+    gap:15px;
     @media (min-width: 768px) {
       flex-direction: row;
     }
 `
 export const UsernameInput = styled.input`
-    width:80%;
-    padding:2rem;
+    width:90%;
+    padding:1rem;
     border-radius: 5px;
     border:  #ffebeb solid 5px;
     outline: none;
+    @media (min-width: 768px) {
+      padding:2rem;
+    }
 `
 export const RoomNumberInput = styled.input`
-    width:80%;
-    padding:2rem;
+    width:90%;
+    padding:1rem;
     border-radius: 5px;
     border:  #ffebeb solid 5px;
     outline: none;
+    @media (min-width: 768px) {
+      padding:2rem;
+    }
 `
 export const IntoChatRoomBtn = styled.button`
     width:100%;
-    padding:2rem;
+    padding:1rem;
     background: #ffe0e5;
     border-radius: 5px;
     border: none;
     cursor: pointer;
     &:hover{
         background: pink;
+    }
+    @media (min-width: 768px) {
+      padding:2rem;
     }
 `
 

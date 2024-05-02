@@ -14,7 +14,7 @@ export default function Main() {
         <S.Nav>
           <S.Logo onClick={() => { navigate('/') }}>👻 CHAT</S.Logo>
           <S.NavA href="https://study-now-pink.vercel.app" target='_blank'>스터디나우</S.NavA>
-          <S.NavA href="https://study-now-pink.vercel.app/study-post/list" target='_blank'>게시판</S.NavA>
+          <S.NavA href="https://study-now-pink.vercel.app/study-post/list" >게시판</S.NavA>
           <S.NavA>앨범</S.NavA>
         </S.Nav>
         <S.IntoChatContainer1>
