@@ -65,7 +65,8 @@ export const IntoChatContainer1 = styled.div`
 `
 
 export const IntoChatContainer2 = styled.div`
-    margin:5rem auto;
+    margin:-2rem auto 5rem;
+    height:20rem;
     max-width: 1080px;
     @media (min-width: 768px) {
       margin:-2rem auto;

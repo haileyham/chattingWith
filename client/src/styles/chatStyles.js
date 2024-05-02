@@ -1,8 +1,11 @@
 import { styled } from 'styled-components';
 
 export const ChattingContainer = styled.div`
-    height:calc(100vh - 3vh);
+    height:calc(100vh - 5rem);
     background-color: #ffeded;
+    @media (min-width: 1080px) {
+      height:calc(100vh - 3rem);
+    }
 `
 
 export const Header = styled.header`
@@ -22,18 +25,23 @@ export const ChattingBox = styled.form`
     position: absolute;
     display: flex;
     width: 100%;
-    height:3rem;
+    height:5rem;
     gap: 0.3rem;
-    padding: 0.5rem;
+    padding: 1rem 1rem 2rem;
     bottom: 0;
     box-sizing: border-box;
     background-color: #ff7878;
+    @media (min-width: 1080px) {
+      height:3rem;
+      padding: 0.5rem;
+    }
 `;
 
 export const ChattingInput = styled.input`
     padding: 0.5rem;
     border: none;
     border-radius: 5px;
+    font-size: 1rem;
     flex-grow: 1;
     &:focus {
         outline: none;
