@@ -6,6 +6,7 @@ import * as S from "../../styles/chatStyles";
 
 
 const socket = io.connect(process.env.SERVER)
+// const socket = io.connect("http://localhost:3001")
 
 export default function ChatRoom(props) {
   const [message, setMessage] = useState("");
@@ -22,8 +23,6 @@ export default function ChatRoom(props) {
     socket.emit("send_message", { message, user: username });
     setChatMessage([...chatMessage, { message, user: username }]);
     setMessage("");
-    console.log(chatMessage)
-
   };
 
   // 방 접속
@@ -66,7 +65,7 @@ export default function ChatRoom(props) {
 
   useEffect(() => {
     socket.on("receive_message", (data) => {
-      setChatMessage([...chatMessage, { message: data.message, user: data.user, time: messageWithTime }])
+      setChatMessage([...chatMessage, { message: data.message, user: data.user, admit: data.admit, time: messageWithTime }])
     })
   }, [socket, chatMessage])
 
@@ -81,8 +80,8 @@ export default function ChatRoom(props) {
           <p style={{ color: "#525252" }}>- <strong>{username}</strong>님 <strong>{room}</strong>번방에 오신 것을 환영합니다. 자유롭게 대화를 나누세요. -</p>
           {chatMessage.map((chat, i) => (
             <div key={i}>
-              {chat.user === "관리자" ?
-                <S.SystemMessage>{chat.message} </S.SystemMessage> : chat.user === username ?
+              {chat.admit === "관리자" ?
+                <S.SystemMessage>{chat.message}</S.SystemMessage> : chat.user === username ?
                   <>
                     <S.MessageMe>
                       <S.UsernameMe>You</S.UsernameMe>
@@ -108,9 +107,10 @@ export default function ChatRoom(props) {
           onChange={(e) => { setMessage(e.target.value) }}
           value={message}
         />
-        <S.ChattingSendBtn onClick={sendMessage}>Send</S.ChattingSendBtn>
-        {/* messageReceived 서버로부터 받은 것 보여주기 */}
-        <S.ChattingSendBtn type="submit" onClick={sendMessageRoom}>Room에만</S.ChattingSendBtn>
+        {chatMessage.user === "chattingWithAdmit" ?
+          <S.ChattingSendBtn onClick={sendMessage}>SuperSend</S.ChattingSendBtn> :
+          <S.ChattingSendBtn type="submit" onClick={sendMessageRoom}>send</S.ChattingSendBtn>
+        }
       </S.ChattingBox>
     </div>
   );
