@@ -109,7 +109,7 @@ export const RoomNumberInput = styled.input`
     }
 `
 export const IntoChatRoomBtn = styled.button`
-    width:100%;
+    width:90%;
     padding:1rem;
     background: #ffe0e5;
     border-radius: 5px;

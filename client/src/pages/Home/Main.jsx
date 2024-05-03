@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { useNavigate, Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import * as S from "../../styles/mainStyles";
 import { handleRoomNum } from '../../utils/roomUtils';
 
@@ -11,6 +11,16 @@ export default function Main() {
 
   const handleNum = (e) => {
     handleRoomNum(e, setRoom);
+  }
+
+  const handleName = () => {
+    const name = username;
+    if (1 <= name.length && name.length < 11) {
+      setUsername(name)
+      navigate(`/chattingRoom?username=${name}&room=${room}`);
+    } else {
+      alert("name은 1-10자 이내로 입력해주세요")
+    }
   }
 
   return (
@@ -28,9 +38,9 @@ export default function Main() {
           <S.WrapInputBtn>
             <S.RoomNumberInput placeholder='방번호 입력' type="number" onChange={handleNum} value={room}></S.RoomNumberInput>
             <S.UsernameInput placeholder='닉네임 입력' onChange={(e) => { setUsername(e.target.value) }}></S.UsernameInput>
-            <Link to={`/chattingRoom?username=${username}&room=${room}`} style={{ width: "80%" }}>
-              <S.IntoChatRoomBtn>채팅방 입장</S.IntoChatRoomBtn>
-            </Link>
+            {/* <Link to={`/chattingRoom?username=${username}&room=${room}`} style={{ width: "80%" }}> */}
+            <S.IntoChatRoomBtn onClick={handleName}>채팅방 입장</S.IntoChatRoomBtn>
+            {/* </Link> */}
           </S.WrapInputBtn>
         </S.IntoChatContainer2>
       </S.MainContainer>
