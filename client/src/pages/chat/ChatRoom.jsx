@@ -5,7 +5,7 @@ import { useLocation } from 'react-router-dom';
 import * as S from "../../styles/chatStyles";
 
 
-const socket = io.connect(process.env.SERVER)
+const socket = io.connect(process.env.REACT_APP_SERVER)
 // const socket = io.connect("http://localhost:3001")
 
 export default function ChatRoom(props) {
