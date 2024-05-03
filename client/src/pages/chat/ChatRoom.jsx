@@ -73,7 +73,7 @@ export default function ChatRoom(props) {
     <div className="App">
       <S.ChattingContainer>
         <S.Header>
-          <S.Heading>Room : {room}</S.Heading>
+          <h1>Room : {room}</h1>
           <p>my name : {username}</p>
         </S.Header>
         <S.MessageList>

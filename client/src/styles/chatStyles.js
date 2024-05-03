@@ -9,18 +9,24 @@ export const ChattingContainer = styled.div`
 `
 
 export const Header = styled.header`
-    height:10vh;
+    height:5rem;
     background-color: #ffd6d6;
     display:flex;
+    flex-direction: column;
     justify-content: space-around;
     align-items: center;
+    h1{
+      margin: 0;
+      padding: 0;
+      font-size: 1.5rem;
+    }
+    p{
+      font-weight: 900;
+    }
+    @media (min-width: 1080px) {
+      flex-direction: row;
+    }
 `
-
-export const Heading = styled.h1`
-    margin: 0;
-    padding: 0;
-`;
-
 export const ChattingBox = styled.form`
     position: absolute;
     display: flex;
