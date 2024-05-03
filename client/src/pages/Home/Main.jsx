@@ -38,9 +38,7 @@ export default function Main() {
           <S.WrapInputBtn>
             <S.RoomNumberInput placeholder='방번호 입력' type="number" onChange={handleNum} value={room}></S.RoomNumberInput>
             <S.UsernameInput placeholder='닉네임 입력' onChange={(e) => { setUsername(e.target.value) }}></S.UsernameInput>
-            {/* <Link to={`/chattingRoom?username=${username}&room=${room}`} style={{ width: "80%" }}> */}
             <S.IntoChatRoomBtn onClick={handleName}>채팅방 입장</S.IntoChatRoomBtn>
-            {/* </Link> */}
           </S.WrapInputBtn>
         </S.IntoChatContainer2>
       </S.MainContainer>
