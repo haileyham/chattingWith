@@ -1,3 +1,4 @@
+require('dotenv').config();
 const express = require('express');
 const app = express();
 const http = require('http');
@@ -10,7 +11,7 @@ const server = http.createServer(app)
 
 const io = new Server(server, {
   cors: {
-    origin: "*",
+    origin: process.env.CORS_ORIGIN,
     methods: ["GET", "POST"],
   },
 });
@@ -40,7 +41,7 @@ io.on("connection", (socket) => {
   })
 })
 
-server.listen(8080, () => {
+server.listen(process.env.PORT, () => {
   console.log("SERVER IS RUNNING")
 })
 
