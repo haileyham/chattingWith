@@ -40,7 +40,7 @@ io.on("connection", (socket) => {
   })
 })
 
-server.listen(process.env.PORT, () => {
+server.listen(8080, () => {
   console.log("SERVER IS RUNNING")
 })
 
