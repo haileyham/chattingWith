@@ -84,17 +84,21 @@ export default function ChatRoom(props) {
                 <S.SystemMessage>{chat.message}</S.SystemMessage> : chat.user === username ?
                   <>
                     <S.MessageMe>
-                      <S.UsernameMe>You</S.UsernameMe>
-                      {chat.message}
-                      <S.TimeMe>{chat.time}</S.TimeMe>
+                      <p>
+                        <S.UsernameMe>You</S.UsernameMe>
+                        {chat.message}
+                        <S.TimeMe>{chat.time}</S.TimeMe>
+                      </p>
                     </S.MessageMe>
                   </>
                   :
                   <>
                     <S.MessageSomeone>
-                      <S.UsernameSomeone>{username}</S.UsernameSomeone>
-                      {chat.message}
-                      <S.TimeSomeone>{chat.time}</S.TimeSomeone>
+                      <p>
+                        <S.UsernameSomeone>{username}</S.UsernameSomeone>
+                        {chat.message}
+                        <S.TimeSomeone>{chat.time}</S.TimeSomeone>
+                      </p>
                     </S.MessageSomeone>
                   </>
               }

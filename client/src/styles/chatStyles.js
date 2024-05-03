@@ -59,35 +59,62 @@ export const ChattingSendBtn = styled.button`
 export const MessageList = styled.ul`
     margin: 0.5rem auto;
     height:85%;
-    padding: 0;
+    padding: 1rem;
     display:flex;
     color:#fff;
     overflow-y: auto;
     flex-direction: column;
     text-align: center;
     list-style: none;
+    @media (min-width: 1080px) {
+      padding:0;
+    }
 `;
 
 export const MessageMe = styled.li`
-    padding: 1rem;
-    background-color: #cebaf1;
-    border-radius: 10px;
-    width:80%;
-    margin-left: auto;
-    margin-right:10px;
-    margin-top:40px;
-    position: relative;
+    text-align: end;
+    p{
+      display: inline-block;
+      position: relative;
+      min-width:20%;
+      max-width:80%;
+      margin-left: auto;
+      margin-right:10px;
+      margin-top:40px;
+      padding: 0.5rem;
+      text-align: center;
+      background-color: #cebaf1;
+      border-radius: 10px;
+      word-break:break-all;
+      white-space: pre-line;
+      @media (min-width: 1080px) {
+        min-width:10%;
+        padding:1rem;
+      }
+    }
 `;
 
 export const MessageSomeone = styled.li`
-    padding: 1rem;
-    background-color: #c29de8;
-    border-radius: 10px;
-    width:80%;
-    margin-right: auto; 
-    margin-left:10px;
-    margin-top:40px;
-    position: relative;
+    text-align: start;
+    p{
+      display: inline-block;
+      position: relative;
+      min-width:20%;
+      max-width:80%;
+      margin-right: auto; 
+      margin-left:10px;
+      margin-top:40px;
+      padding: 0.5rem;
+      text-align: center;
+      background-color: #c29de8;
+      border-radius: 10px;
+      word-break:break-all;
+      white-space: pre-line;
+      @media (min-width: 1080px) {
+        min-width:10%;
+        padding:1rem;
+      }
+}
 `;
 
 export const TimeMe = styled.span`
@@ -104,14 +131,14 @@ export const TimeSomeone = styled.span`
     top:17px;
 `
 
-export const UsernameMe = styled.p`
+export const UsernameMe = styled.span`
     color:#797979;
     position: absolute;
     right:10px;
     top:-30px;
     `
 
-export const UsernameSomeone = styled.p`
+export const UsernameSomeone = styled.span`
     color:#797979;
     position: absolute;
     left:10px;
