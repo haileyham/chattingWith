@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useRef } from 'react'
 import io from 'socket.io-client';
 import { useEffect, useState } from 'react';
 import { useLocation } from 'react-router-dom';
@@ -17,6 +17,7 @@ export default function ChatRoom(props) {
   const searchParams = new URLSearchParams(location.search);
   const username = searchParams.get('username');
   const room = searchParams.get('room');
+  const ref = useRef(null);
 
   // 전체 메시지 전달
   const sendMessage = () => {
@@ -67,6 +68,7 @@ export default function ChatRoom(props) {
     socket.on("receive_message", (data) => {
       setChatMessage([...chatMessage, { message: data.message, user: data.user, admit: data.admit, time: messageWithTime }])
     })
+    ref.current.scrollTop = ref.current.scrollHeight;
   }, [socket, chatMessage])
 
   return (
@@ -76,7 +78,7 @@ export default function ChatRoom(props) {
           <h1>Room : {room}</h1>
           <p>my name : {username}</p>
         </S.Header>
-        <S.MessageList>
+        <S.MessageList ref={ref}>
           <p style={{ color: "#525252" }}>- <strong>{username}</strong>님 <strong>{room}</strong>번방에 오신 것을 환영합니다. 자유롭게 대화를 나누세요. -</p>
           {chatMessage.map((chat, i) => (
             <div key={i}>
