@@ -32,18 +32,15 @@ export const IntoChatContainer1 = styled.div`
     }
     @keyframes example {
       from {
-    opacity: 0;
-    filter: brightness(0);
-    transform: translateY(30px);
+      opacity: 0;
+      filter: brightness(0);
+      transform: translateY(30px);
   }
-  to {
-    opacity: 1;
-    filter: brightness(1);
+      to {
+        opacity: 1;
+        filter: brightness(1);
   }
 }
-
-
-
     img{
       width: 100%;
       height: 100%;
@@ -55,6 +52,7 @@ export const IntoChatContainer1 = styled.div`
 
 export const IntoChatContainer2 = styled.div`
     max-width: 1080px;
+    margin:auto;
     height:35vh;
     padding-bottom:1rem;
     position: relative;
@@ -70,6 +68,9 @@ export const IntoChatContainer2 = styled.div`
       &:hover{
         background: rgb(82, 87, 234);
       }
+      @media (min-width: 1080px) {
+        padding: 2rem;
+    }
     }
 `
 
@@ -83,7 +84,7 @@ export const WrapInputBtn = styled.div`
     align-items:center;
     font-size: 1rem;
     gap:1rem;
-    @media (min-width: 768px) {
+    @media (min-width: 1080px) {
       flex-direction: row;
     }
 `
@@ -97,7 +98,7 @@ export const UsernameInput = styled.input`
     &:focus{
       border:  rgb(212, 236, 255) solid 5px;
     }
-    @media (min-width: 768px) {
+    @media (min-width: 1080px) {
       padding:2rem;
     }
 `
@@ -110,7 +111,7 @@ export const RoomNumberInput = styled.input`
     &:focus{
       border:  rgb(212, 236, 255) solid 5px;
     }
-    @media (min-width: 768px) {
+    @media (min-width: 1080px) {
       padding:2rem;
     }
 `
