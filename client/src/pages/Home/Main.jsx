@@ -29,6 +29,13 @@ export default function Main() {
       <Toggle />
       <S.MainContainer >
         <S.IntoChatContainer1>
+          <h1>
+            <span>원하는 방에</span>
+            <span>입장하여</span>
+            <span>실시간 채팅을</span>
+            <span>즐겨보세요!</span>
+          </h1>
+          <img src="/172444.webp" alt="" />
         </S.IntoChatContainer1>
         <S.IntoChatContainer2>
           <S.WrapInputBtn>
