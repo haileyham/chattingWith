@@ -3,6 +3,7 @@ import io from 'socket.io-client';
 import { useEffect, useState } from 'react';
 import { useLocation } from 'react-router-dom';
 import * as S from "../../styles/chatStyles";
+import Header from '../../components/Header';
 
 
 const socket = io.connect(process.env.REACT_APP_SERVER)
@@ -74,10 +75,7 @@ export default function ChatRoom(props) {
   return (
     <div className="App">
       <S.ChattingContainer>
-        <S.Header>
-          <h1>Room : {room}</h1>
-          <p>my name : {username}</p>
-        </S.Header>
+        <Header room={room} username={username} />
         <S.MessageList ref={ref}>
           <p style={{ color: "#525252" }}>- <strong>{username}</strong>님 <strong>{room}</strong>번방에 오신 것을 환영합니다. 자유롭게 대화를 나누세요. -</p>
           {chatMessage.map((chat, i) => (

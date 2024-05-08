@@ -1,110 +1,117 @@
 import { styled } from 'styled-components';
 
-const imagePath = process.env.PUBLIC_URL + '/172444.webp';
+const borderRadius = '8rem';
 
 export const MainContainer = styled.main`
     margin:0;
     box-sizing: border-box;
     height:100vh;
     background: #fff;
-`
-
-export const Nav = styled.nav`
-    display:flex;
-    max-width:1200px;
-    margin:auto;
-    padding:2rem 1rem 1rem;
-    gap:1rem;
-    text-align: center;
-    align-items: center;
-    box-sizing: border-box;
-`
-
-export const Logo = styled.span`
-    font-weight: 900;
-    font-size: 1.3rem;
-    flex-grow:2;
-    cursor: pointer;
-`
-
-export const NavA = styled.a`
-    position: relative;
-    flex-grow: 1;
-    color:inherit;
-    text-decoration: none;
-    cursor: pointer;
-    &::before {
-        content: '';
-        position: absolute;
-        top:1.7rem;
-        left: 50%;
-        width: 0;
-        height: 2px;
-        background: #3f3f3f; 
-        transition: width 0.3s ease; 
-        transform: translateX(-50%);
-      }
-    &:hover::before {
-        width: 70%; 
-    }
-    @media (min-width: 1080px) {
-      padding: 2rem;
-      &::before {
-        top:auto;
-        bottom: 1rem;
-      }
-    }
-`
+    `
 
 export const IntoChatContainer1 = styled.div`
-    background-image: url('${imagePath}');
-    background-size: cover;
-    background-position:center bottom;
-    margin: 2rem auto;
-    height:22rem;
+    position: relative;
+    width:100%;
+    height:65vh;
+    h1{
+      position: absolute;
+      color:#fff;
+      bottom:10%;
+      left:10%;
+      line-height: 3rem;
+      z-index: 2;
+      span{
+        opacity: 0;
+        animation: example 1s alternate forwards;
+        display: block;
+      }
+      span:nth-child(1) { animation-delay: 1s; }
+      span:nth-child(2) { animation-delay: 2s; }
+      span:nth-child(3) { animation-delay: 3s; }
+      span:nth-child(4) { animation-delay: 4s; }
+    }
+    @keyframes example {
+      from {
+      opacity: 0;
+      filter: brightness(0);
+      transform: translateY(30px);
+  }
+      to {
+        opacity: 1;
+        filter: brightness(1);
+  }
+}
+    img{
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-bottom-right-radius: ${borderRadius};
+      filter:brightness(0.5);
+    }
 `
 
 export const IntoChatContainer2 = styled.div`
-    margin:-2rem auto 5rem;
-    height:20rem;
     max-width: 1080px;
-    @media (min-width: 768px) {
-      margin:-2rem auto;
-      height:20rem;
+    margin:auto;
+    height:35vh;
+    padding-bottom:1rem;
+    position: relative;
+    button{
+      background:rgb(118, 193, 254);
+      padding: 1rem 6rem;
+      font-size: 1.2rem;
+      font-weight:900;
+      color:#fff;
+      border: none;
+      border-radius:  ${borderRadius};
+      cursor: pointer;
+      &:hover{
+        background: rgb(82, 87, 234);
+      }
+      @media (min-width: 1080px) {
+        padding: 2rem;
+    }
     }
 `
 
 export const WrapInputBtn = styled.div`
     display:flex;
-    margin:auto;
+    margin: auto;
     width:90%;
     height:100%;
     flex-direction: column;
     justify-content: center; 
     align-items:center;
     font-size: 1rem;
-    gap:15px;
-    @media (min-width: 768px) {
+    gap:1rem;
+    @media (min-width: 1080px) {
       flex-direction: row;
     }
 `
+
 export const UsernameInput = styled.input`
     width:90%;
-    padding:1rem;
-    border-radius: 5px;
+    padding:1rem 1.5rem;
     border:  #ffebeb solid 5px;
+    border-radius: 2rem;
     outline: none;
-    @media (min-width: 768px) {
+    &:focus{
+      border:  rgb(212, 236, 255) solid 5px;
+    }
+    @media (min-width: 1080px) {
       padding:2rem;
     }
 `
 export const RoomNumberInput = styled.input`
     width:90%;
-    padding:1rem;
-    border-radius: 5px;
+    padding:1rem 1.5rem;
+    border-radius: 2rem;
     border:  #ffebeb solid 5px;
     outline: none;
-    @media (min-width: 768px) {
+    &:focus{
+      border:  rgb(212, 236, 255) solid 5px;
+    }
+    @media (min-width: 1080px) {
       padding:2rem;
     }
 `
