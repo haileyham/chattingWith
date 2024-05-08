@@ -95,4 +95,46 @@ export const Nav = styled.nav`
   }
 `
 
-
+// chatting room
+export const Header = styled.header`
+    position: relative;
+    height:6rem;
+    padding:2rem 0;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    border-end-end-radius:1rem;
+    border-bottom-left-radius:1rem;
+    background-color: #ffebeb;
+    button{
+      position: absolute;
+      top:60%;
+      left:5%;
+      padding:0.3rem 0.5rem 0.5rem;
+      border: none;
+      border-radius: 1rem;
+      background-color: #fff;
+      font-size: 1.5rem;
+      transform: translateY(-50%);
+      cursor: pointer;
+      &:hover{
+          background: #ffe3e3;
+        }
+    }
+    h1{
+      margin: 0;
+      padding: 0;
+      font-size: 1.5rem;
+    }
+    p{
+      font-weight: 900;
+    }
+    @media (min-width: 1080px) {
+      flex-direction: row;
+      button{
+        top:50%;
+        left:2%;
+      }
+    }
+`

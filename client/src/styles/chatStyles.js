@@ -2,31 +2,12 @@ import { styled } from 'styled-components';
 
 export const ChattingContainer = styled.div`
     height:calc(100vh - 5rem);
-    background-color: #ffeded;
+    background-color: #fff6f6;
     @media (min-width: 1080px) {
       height:calc(100vh - 3rem);
     }
 `
 
-export const Header = styled.header`
-    height:5rem;
-    background-color: #ffd6d6;
-    display:flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-    h1{
-      margin: 0;
-      padding: 0;
-      font-size: 1.5rem;
-    }
-    p{
-      font-weight: 900;
-    }
-    @media (min-width: 1080px) {
-      flex-direction: row;
-    }
-`
 export const ChattingBox = styled.form`
     position: absolute;
     display: flex;
@@ -36,7 +17,7 @@ export const ChattingBox = styled.form`
     padding: 1rem 1rem 2rem;
     bottom: 0;
     box-sizing: border-box;
-    background-color: #ff7878;
+    background-color: #ffebeb;
     @media (min-width: 1080px) {
       height:3rem;
       padding: 0.5rem;
