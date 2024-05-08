@@ -7,23 +7,33 @@ export const NavToggle = styled.div`
     width: 24px;
     height: 18px;
     position: fixed;
-    top: 1rem;
-    left: 1rem;
+    top: 2rem;
+    left: 2rem;
     cursor: pointer;
     z-index: 99;
+    @media (min-width: 1080px) {
+      width:2rem;
+      height:2rem;
+    }
 
     //div
     div{
       width: 100%;
       height: 3px;
-      background-color: black;
+      background-color: #fff;
       transition: all 0.3s ease;
+      @media (min-width: 1080px) {
+      height:5px;
+    }
     }
     
     //toggle active
     &.open {
         div:nth-child(1) {
             transform: rotate(45deg) translate(5px, 5px);
+            @media (min-width: 1080px) {
+            transform: rotate(45deg) translate(5px, 5px);
+            }
         }
 
         div:nth-child(2) {
@@ -32,6 +42,9 @@ export const NavToggle = styled.div`
 
         div:nth-child(3) {
             transform: rotate(-45deg) translate(5px, -5px);
+            @media (min-width: 1080px) {
+            transform: rotate(-45deg) translate(15px, -15px);
+            }
         }
     }
 `
@@ -40,26 +53,29 @@ export const Nav = styled.nav`
       position: fixed;
       display: flex;
       flex-direction: column;
-      gap: 3rem;
+      gap: 1rem;
       height: 100vh;
       margin: 2rem auto;
-      padding: 5rem 2rem 0;
+      padding: 5rem 1rem 0;
       justify-content: flex-start;
       align-items: center;
       border-top-right-radius: 10px;
       border-bottom-right-radius: 10px;
       backdrop-filter: saturate(180%) blur(30px);
       text-align: center;
-            color:#424242;
+      color: #fff;
       transition: transform 0.5s ease;
       top: -2rem;
       z-index: 98;
       a {
           width: 100%;
+          padding:1rem 1.5rem;
           font-size: 1rem;
           font-weight: 900;
+          background-color: rgba(255,255,255,0.2);
+          border-radius: 10rem;
           &:hover {
-              color: #fff;
+              color: #424242;
           }
       }
       &.home {
@@ -69,12 +85,6 @@ export const Nav = styled.nav`
       }
       @media (min-width: 1080px) {
         width:20%;
-        color:#fff;
-        a{
-          &:hover{
-            color:#424242;
-          }
-        }
       }
 }
   &.navToggleClose {
