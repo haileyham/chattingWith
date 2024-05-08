@@ -9,53 +9,6 @@ export const MainContainer = styled.main`
     background: #fff;
 `
 
-export const Nav = styled.nav`
-    display:flex;
-    max-width:1200px;
-    margin:auto;
-    padding:2rem 1rem 1rem;
-    gap:1rem;
-    text-align: center;
-    align-items: center;
-    box-sizing: border-box;
-`
-
-export const Logo = styled.span`
-    font-weight: 900;
-    font-size: 1.3rem;
-    flex-grow:2;
-    cursor: pointer;
-`
-
-export const NavA = styled.a`
-    position: relative;
-    flex-grow: 1;
-    color:inherit;
-    text-decoration: none;
-    cursor: pointer;
-    &::before {
-        content: '';
-        position: absolute;
-        top:1.7rem;
-        left: 50%;
-        width: 0;
-        height: 2px;
-        background: #3f3f3f; 
-        transition: width 0.3s ease; 
-        transform: translateX(-50%);
-      }
-    &:hover::before {
-        width: 70%; 
-    }
-    @media (min-width: 1080px) {
-      padding: 2rem;
-      &::before {
-        top:auto;
-        bottom: 1rem;
-      }
-    }
-`
-
 export const IntoChatContainer1 = styled.div`
     background-image: url('${imagePath}');
     background-size: cover;

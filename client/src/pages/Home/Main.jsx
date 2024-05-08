@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom';
 import * as S from "../../styles/mainStyles";
 import { handleRoomNum } from '../../utils/roomUtils';
+import Toggle from '../../components/Toggle';
 
 export default function Main() {
   const navigate = useNavigate();
@@ -25,13 +26,8 @@ export default function Main() {
 
   return (
     <>
+      <Toggle />
       <S.MainContainer >
-        <S.Nav>
-          <S.Logo onClick={() => { navigate('/') }}>👻 CHAT</S.Logo>
-          <S.NavA href="https://study-now-pink.vercel.app" target='_blank'>스터디나우</S.NavA>
-          <S.NavA href="https://study-now-pink.vercel.app/study-post/list" >게시판</S.NavA>
-          <S.NavA>앨범</S.NavA>
-        </S.Nav>
         <S.IntoChatContainer1>
         </S.IntoChatContainer1>
         <S.IntoChatContainer2>
