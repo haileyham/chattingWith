@@ -32,10 +32,11 @@ export default function Main() {
           <h1>
             <span>원하는 방에</span>
             <span>입장하여</span>
+            <span>다양한 사람들과</span>
             <span>실시간 채팅을</span>
             <span>즐겨보세요!</span>
           </h1>
-          <img src="/172444.webp" alt="" />
+          <img src="/172444.webp" alt="mainImg" />
         </S.IntoChatContainer1>
         <S.IntoChatContainer2>
           <S.WrapInputBtn>

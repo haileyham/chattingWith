@@ -25,10 +25,11 @@ export const IntoChatContainer1 = styled.div`
         animation: example 1s alternate forwards;
         display: block;
       }
-      span:nth-child(1) { animation-delay: 1s; }
-      span:nth-child(2) { animation-delay: 2s; }
-      span:nth-child(3) { animation-delay: 3s; }
-      span:nth-child(4) { animation-delay: 4s; }
+      span:nth-child(1) { animation-delay: 0s; }
+      span:nth-child(2) { animation-delay: 1s; }
+      span:nth-child(3) { animation-delay: 2s; }
+      span:nth-child(4) { animation-delay: 3s; }
+      span:nth-child(5) { animation-delay: 4s; }
     }
     @keyframes example {
       from {

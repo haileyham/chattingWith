@@ -62,6 +62,7 @@ export const Nav = styled.nav`
       border-top-right-radius: 10px;
       border-bottom-right-radius: 10px;
       backdrop-filter: saturate(180%) blur(30px);
+      -webkit-backdrop-filter:saturate(180%) blur(30px);
       text-align: center;
       color: #fff;
       transition: transform 0.5s ease;
