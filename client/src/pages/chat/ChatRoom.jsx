@@ -95,7 +95,7 @@ export default function ChatRoom(props) {
                   <>
                     <S.MessageSomeone>
                       <p>
-                        <S.UsernameSomeone>{username}</S.UsernameSomeone>
+                        <S.UsernameSomeone>{chat.user}</S.UsernameSomeone>
                         {chat.message}
                         <S.TimeSomeone>{chat.time}</S.TimeSomeone>
                       </p>
