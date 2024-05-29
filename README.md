@@ -1,9 +1,13 @@
 # <span id="top">🎡 Chatting With</span> 
 ### 🔗 [Chatting With 바로가기](https://chatting-with.vercel.app/)
+<br/>
+
+<img src="https://private-user-images.githubusercontent.com/109202954/334668223-b0a4ff38-d377-40b6-870d-cb45e0b06d67.jpg?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MTY5NjE0NTUsIm5iZiI6MTcxNjk2MTE1NSwicGF0aCI6Ii8xMDkyMDI5NTQvMzM0NjY4MjIzLWIwYTRmZjM4LWQzNzctNDBiNi04NzBkLWNiNDVlMGIwNmQ2Ny5qcGc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjQwNTI5JTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI0MDUyOVQwNTM5MTVaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT1iZmFkZDQ1MjNlZDVlYzAwNTRhY2M2NGQxMWRmYmNkZjQzMWQwMjNiMWQ0NjQxMTc2ZDAyMjQ4MTkyNTBlYmIzJlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCZhY3Rvcl9pZD0wJmtleV9pZD0wJnJlcG9faWQ9MCJ9.Qkb_TVmsgwoA6NBFhXjJn7yuNHmfQ26M-_DZedrp-tw" alt="chatting-with 이미지" style="max-width:700px">
 
 <br/>
 
 ## 📢 Chatting With 서비스 소개
+
 실시간 랜덤 채팅을 통해 다른 사용자들과 소통할 수 있는 플랫폼입니다. 사용자는 원하는 채팅 방에 닉네임을 설정하여 참여할 수 있습니다. 채팅 방에 참여한 후에는 다른 이들과 즉각적으로 채팅할 수 있으며, 채팅 내용은 실시간으로 전송되어 상호 작용이 가능합니다.
 #### 1. 1~100번 방에 입장
 - 1번부터 100번까지의 방 중에서 원하는 방에 입장하여 대화 가능합니다.
@@ -89,6 +93,8 @@ backdrop-filter: saturate(180%) blur(30px);
 - 배포 사이트 변경하면서 환경변수 설정을 제대로 하지 않았음. 바봅..
   - client : React 환경이기에 REACT_APP 접두사 
   - server : node.js 환경이기에 dotenv 패키지 설치 후 및 설정 후, 환경변수 처리
+
+<p align="right"><a href="#top">TOP 🔼</a></p>
 
 <br/>
 
