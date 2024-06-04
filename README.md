@@ -2,7 +2,7 @@
 ### 🔗 [Chatting With 바로가기](https://chatting-with.vercel.app/)
 <br/>
 
-<img src="https://private-user-images.githubusercontent.com/109202954/334668223-b0a4ff38-d377-40b6-870d-cb45e0b06d67.jpg?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MTY5NjE0NTUsIm5iZiI6MTcxNjk2MTE1NSwicGF0aCI6Ii8xMDkyMDI5NTQvMzM0NjY4MjIzLWIwYTRmZjM4LWQzNzctNDBiNi04NzBkLWNiNDVlMGIwNmQ2Ny5qcGc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjQwNTI5JTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI0MDUyOVQwNTM5MTVaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT1iZmFkZDQ1MjNlZDVlYzAwNTRhY2M2NGQxMWRmYmNkZjQzMWQwMjNiMWQ0NjQxMTc2ZDAyMjQ4MTkyNTBlYmIzJlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCZhY3Rvcl9pZD0wJmtleV9pZD0wJnJlcG9faWQ9MCJ9.Qkb_TVmsgwoA6NBFhXjJn7yuNHmfQ26M-_DZedrp-tw" alt="chatting-with 이미지" style="max-width:700px">
+<img src="https://raw.githubusercontent.com/haileyham/chattingWith/84afe9b0b5940647303f0c5b99b27ee3de8e86bc/client/public/img/chattingWith.jpg" alt="chatting-with 이미지" style="max-width:700px">
 
 <br/>
 
