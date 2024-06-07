@@ -51,22 +51,40 @@
   - 채팅용 서버 배포
 
 ## server 및 client
-### [Main]
+### [🔎 Main]
+| 방 입장 및 닉네임 설정 | 
+| ---------------------------| 
+| <img width="250px" src="https://raw.githubusercontent.com/haileyham/chattingWith/main/client/assets/images/1.gif"> | 
 #### 💡 방 입장
 - 1번부터 100번방까지 원하는 방에 입장하여 대화 가능(예외처리 완료)
+
 #### 💡 닉네임 설정
 - 원하는 닉네임 설정 후, 입장 가능(예외처리 완료)
+
+
 #### 💡 Side Toggle Bar
 - side toggle bar를 활용하여 편리한 이용 가능
 - backdrop 불투명 유리 효과 설정 
-### [Chatting Room]
+
+
+### [🔎 Chatting Room] 
+| user 입장 알림 | user 메시지 위치 | 스크롤 맨 밑 추적 |
+| --------------------------- | --------------------------- | --------------------------- |
+|<img width="250px" src="https://raw.githubusercontent.com/haileyham/chattingWith/main/client/assets/images/2.gif"> | <img width="250px" src="https://raw.githubusercontent.com/haileyham/chattingWith/main/client/assets/images/3.gif"> |<img width="250px" src="https://raw.githubusercontent.com/haileyham/chattingWith/main/client/assets/images/4.gif">|
+
 #### 💡 user 입장 알림 - system message
 - 채팅방 내에 신규 유저 입장시, system message로 유저 닉네임과 함께 알림 메시지 전달 처리
 #### 💡 스크롤 맨 밑 추적
 - 채팅 진행 시, 자동으로 스크롤바 최하단으로 가도록하여 사용자 편리성 증대(useRef 이용)
 #### 💡 본인 & 상대 글 위치
 - 상대방과 나의 글을 분별하여 위치 각 조정
-- 단순 일자형 대화가 아닌 상대방과의 채팅 메시지 구분을 위한 UI 처리를 통한 편리성 증대
+- 단순 일자형 대화가 아닌 상대방과의 채팅 메시지 구분을 위한 UI 처리를 통한 편리성 증대 
+
+<br/>
+
+| 반응형 웹 pc 버전 가능 |
+| --------------------------- | 
+|<img width="500px" src="https://raw.githubusercontent.com/haileyham/chattingWith/main/client/assets/images/5.JPG">|
 
 <p align="right"><a href="#top">TOP 🔼</a></p>
 
